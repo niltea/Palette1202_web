@@ -1,0 +1,10 @@
+{
+  "options" : {
+    "siteName"    : "KISUKE OHTA",
+    "description" : "description",
+    "keywords"    : "",
+    "rootUrl"     : "https://kisukeohta.com",
+    "ogpImage"    : "https://kisukeohta.com/images/ogp.jpg",
+    "twitterID"   : "@741ksk"
+  }
+}

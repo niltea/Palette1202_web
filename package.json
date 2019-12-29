@@ -1,0 +1,39 @@
+{
+  "name": "effect-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "niltea <furutabodoni@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "commander": "^2.9.0",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.0.5",
+    "pug": "^2.0.0-rc.1",
+    "pug-cli": "https://github.com/pugjs/pug-cli.git",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.5.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "lite-server": "^2.3.0",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "pug": "pug src/pug/ --hierarchy -o docs -P -O pug_options.json",
+    "watch:pug": "pug src/pug/ --hierarchy -o docs -P -w -O pug_options.json",
+    "webpack": "webpack",
+    "watch:webpack": "webpack -w",
+    "server": "lite-server",
+    "watch": "yarn run watch:webpack & yarn run watch:pug",
+    "start": "yarn run server & yarn run watch"
+  }
+}
