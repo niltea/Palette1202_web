@@ -7,7 +7,7 @@ block title
     title Palette1202
 block meta
     //- Page Setting
-    meta(name='description', content="イラストレーター向け左手デバイス Palette1202、登場。")
+    meta(name='description', content="イラストレーター向けアシストデバイス Palette1202、登場。")
     meta(name='Keywords', content="左手デバイス")
     meta(name="viewport" content='width=750,user-scalable=yes')
     meta(name="apple-mobile-web-app-title", content="")
@@ -19,13 +19,13 @@ block meta
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content="@niltea")
     meta(name="twitter:title" content="Palette1202")
-    meta(name="twitter:description" content="イラストレーター向け左手デバイス Palette1202、登場。")
+    meta(name="twitter:description" content="イラストレーター向けアシストデバイス Palette1202、登場。")
     meta(name="twitter:image:src" content="http://palette1202.nilgiri-tea.net/images/ogp.png")
     meta(property="og:url" content="http://palette1202.nilgiri-tea.net/")
     meta(property="og:type" content="website")
     meta(property="og:title" content="Palette1202")
     meta(property="og:site_name" content="Palette1202")
-    meta(property="og:description" content="イラストレーター向け左手デバイス Palette1202、登場。")
+    meta(property="og:description" content="イラストレーター向けアシストデバイス Palette1202、登場。")
     meta(property="og:image" content="http://palette1202.nilgiri-tea.net/images/ogp.png")
 block body
     div#wrapper.wrapper.loaderTarget
@@ -34,22 +34,21 @@ block body
             .hero-content
                 .hero-spacer
                 h1.hero-logo Palette1202
-                .hero-lead 右手にペンを、<br class="onlyPC">左手にはパレットを。
-                .hero-text イラストレーター向け左手デバイス<br>Palette1202、登場。<br>12個のキーと2つのダイヤルで、<br>イラスト制作をよりスムーズに。
+                .hero-lead 作業のお供に<br class="onlyPC">パレットを。
+                .hero-text イラストレーター向けアシストデバイス<br>Palette1202、登場。<br>12個のキーと2つのダイヤルで、<br>イラスト制作をよりスムーズに。
                 a.qmk-logo.hoverOpacity(href="https://qmk.fm", target="_blank")
         .content_section.content_section-temp
             h2 ファームウェア
             p
-                |現在、QMK Firmwareリポジトリへマージ依頼中のため、下記よりソースのDLをお願いします。<br>
-                a(href="https://github.com/niltea/qmk_firmware/tree/palette1202/keyboards/palette1202", target="_blank") GitHub<br>
-                a(href="/files/palette1202_default-20191229-src.zip") ソースコード<br>
+                a(target="https://github.com/qmk/qmk_firmware") QMK Firmware
+                br
                 a(href="/files/palette1202_default-20191229.zip") コンパイル済.hexファイル
         .content_section.content_section-temp
             h2 キーマップ
             p
                 a(href="/files/palette1202_default_keymap-20191229.pdf") キー一覧表のダウンロード(PDF)
 
-        //-.content_section.content_section-introduction
+        .content_section.content_section-introduction
             h2.section_header Introduction
             section.inner_section.text-right
                 .content
@@ -57,7 +56,7 @@ block body
                     p
                         |Clip StudioやPhotoshopといった、<br>
                         |イラスト制作ソフトの操作を効率化するために<br>
-                        |開発された左手デバイスです。
+                        |開発されたアシストデバイスです。
                     p
                         |12個のキー、そして2個のダイヤルの動作は、<br>
                         |QMK Firmwareでカスタマイズすることもでき、<br>
@@ -67,33 +66,26 @@ block body
             section.inner_section.text-left
                 .content
                     h3.inner_section_header.order-02 BLE Micro Pro対応
-                        span.small ※マイコン表面実装タイプを除く
                     p
-                        | BLE Micro Pro(別売)への電源供給を標準でサポート。<br>
-                        | また、ファームウェアもご用意しています。<br>
                         | 電池ケースを取り付けることで、<br>
-                        | 特別な改造なしでそのまま無線化することができます。
+                        | BLE Micro Pro(別売)への電源供給を標準でサポート。<br>
+                        | また、ファームウェアも供給しており、<br>
+                        | 特別な改造なしで容易に無線化することができます。
                     p
                         | 煩雑な配線から開放されることで、<br>
                         | 持ち運びに便利であることはもちろん、<br>
                         | デスクトップで使用するときもストレスフリーです。
             section.inner_section.text-right
                 .content
-                    h3.inner_section_header.order-03 選べる組み立てタイプ
+                    h3.inner_section_header.order-03 左右両対応(予定)
                     p
-                        | Pro Micro(またはBLE Micro Pro)を使用する標準タイプ、<br>
-                        | そして比較的コンパクトなマイコン表面実装タイプの<br>
-                        | 2種類をラインナップ。
-                    p
-                        | マイコン表面実装タイプはUSB Type-Cコネクタを<br>
-                        | 実装することができるため、<br>
-                        | 頻繁なコネクタの抜き差しでも故障の心配がありません。<br>
-                        |
-                        span.small
-                            |※マイコン表面実装タイプはBLE Micro Proに対応しません。
+                        | ※アップデートにて対応予定<br>
+                        | 左手・右手両対応することで、左利きの方もご使用いただけます。<br>
+                        | また、イラスト制作用のデバイスのみならず、<br>
+                        | 作業用のマクロパッドとして使用することも可能です。
                 figure
                     img(src="")
-        //-.content_section.content_section-buy
+        .content_section.content_section-buy
             h2.section_header How To Buy
             .buy-shops
                 dl
@@ -110,14 +102,14 @@ block body
                     | 組み立てキットをお求めの場合、<br>
                     | 本キットの他に必要なものがあります。<br>
                     | 組み立て方法をご確認のうえ、別途ご用意ください。
-        //-.content_section.content_section-buildGuide
+        .content_section.content_section-buildGuide
             h2.section_header Build Guide
             .build-introduction
                 section.inner_section
                     .content
-                        h3.inner_section_header.order-01 Pro Micro Editionビルドガイド
+                        h3.inner_section_header.order-01 ビルドガイド
                         p
-                            |このガイドでは、Palette 1202(Pro Micro版)の組み立て手順を解説します。
+                            |このガイドでは、Palette 1202の組み立て手順を解説します。
                 section.inner_section
                     .content
                         h3.inner_section_header.order-02 部品一覧
@@ -135,14 +127,14 @@ block body
                             dt コンスルー
                             dd 2
                             dt ダイオード(1N4148)
-                                span.note ※表面実装が難しい方のみ。
+                                span.note ※付属の表面実装ダイオードの使用が難しい方のみ。
                             dd 14
                             dt キースイッチ
                             dd 12
                             dt キーキャップ
                             dd 12
                             dt Kailh Choc用 Hotswap ソケット
-                                span.note ※キースイッチにChocスイッチを使用する際のみ
+                                span.note ※キースイッチにChocスイッチを使用する際のみ。MX用は付属しています。
                             dd 12
                             dt OLED ディスプレイ
                                 span.note ※オプション
@@ -166,8 +158,8 @@ block body
                     .content
                         h3.inner_section_header.order-01 ダイオードの取り付け
                         p
-                            | すべて基板の下側がカソードです。<br>
-                            | 部品のに印字された線を下向きになるよう取り付けます。
+                            | すべて基板のPro Micro寄り側がカソード側です。<br>
+                            | 部品に印字された線を下向きになるよう取り付けます。
                 section.inner_section.text-right
                     .content
                         h3.inner_section_header.order-02 Hot Swap ソケット
