@@ -1,7 +1,7 @@
 @charset "UTF-8";
+@import "./libs/reset";
 @import "./libs/fonts";
 @import "./libs/mixin";
-@import "./libs/reset";
 // @import "./libs/swiper";
 
 /* ===============
@@ -104,14 +104,17 @@ body {
   position: relative;
   font-family: source-han-sans-japanese, sans-serif;
   //overflow-x: hidden;
+  @media screen and (min-width: 751px) {
+    .onlySP {display: none;}
+    padding-bottom: 50px;
+  }
   @media screen and (max-width: 750px) {
+    width: 750px;
+    padding-bottom: 50px;
     br.PC,
     .onlyPC {display: none;}
     br.SP {display: inline;}
     .onlySP {display: block;}
-  }
-  @media screen and (min-width: 751px) {
-    .onlySP {display: none;}
   }
 }
 
@@ -126,52 +129,28 @@ content - common
     margin: 0 auto;
   }
   .section_header {
-    @include txtHide;
     font-weight: 800;
     text-align: center;
-    margin: 0 auto;
   }
   .inner_section {
   }
   .inner_section_header {
-    @include txtHide;
     font-weight: 800;
-    height: 25px;
   }
   @media screen and (min-width: 751px) {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.75em;
+    padding: 0 50px 90px;
     & + .content_section {
-      margin-top: 60px;
+      margin-top: 90px;
     }
     .section_header {
-      width: 290px;
-      height: 45px;
-      background: url(../images/content_section-header-pc.png) 0 0 no-repeat;
+      font-size: 58px;
+    }
+    .inner_section {
+      margin-top: 80px;
     }
     .inner_section_header {
-      background: no-repeat;
-      &.order-01 {
-        background-position: 0 0;
-      }
-      &.order-02 {
-        background-position: 0 -25px * 1;
-      }
-      &.order-03 {
-        background-position: 0 -25px * 2;
-      }
-      &.order-04 {
-        background-position: 0 -25px * 3;
-      }
-      &.order-05 {
-        background-position: 0 -25px * 4;
-      }
-      &.order-06 {
-        background-position: 0 -25px * 5;
-      }
-      &.order-07 {
-        background-position: 0 -25px * 6;
-      }
     }
   }
   @media screen and (max-width: 750px) {
@@ -186,20 +165,6 @@ content - common
 }
 
 /* ===============
-content - temp
-================== */
-.content_section-temp {
-  @media screen and (min-width: 751px) {
-    padding-left: 60px;
-    margin-top: 59px;
-  }
-  @media screen and (max-width: 750px) {
-    margin-top: 80px;
-    .section_header {}
-  }
-}
-
-/* ===============
 content - hero
 ================== */
 .content_section-hero {
@@ -208,47 +173,37 @@ content - hero
     //logo
   }
   @media screen and (min-width: 751px) {
-    margin-top: 70px;
+    padding-top: 70px;
     display: flex;
     justify-content: space-between;
-    padding-right: 60px;
     .hero-image {
-      flex-grow: 1;
-      //width: 70vw;
-      height: 55vw;
-      max-height: 590px;
-      background: #fff url(/images/palette1202.jpg) right 50% no-repeat;
-      background-size: cover;
+      width: 555px;
+      height: 490px;
+      background: #fff url(http://placehold.jp/000000/555x490.png) center 50% no-repeat;
     }
     //content
     .hero-content {
       position: relative;
-      margin-left: 50px;
-      width: 250px;
-      height: calc((100vw - 750px) * 0.38 + 400px);
+      margin-left: 20px;
+      width: 325px;
       max-height: 495px;
+      padding-top: 24px;
       padding-bottom: 60px;
-    }
-    .hero-spacer {
-      width: 100%;
-      height: calc((100vw - 750px) * 0.38);
-      max-height: 95px;
     }
     h1 {
       background: url(../images/logo.svg) 0 0 no-repeat;
-      width: 170px;
-      height: 95px;
+      width: 213px;
+      height: 120px;
       background-size: 100% auto;
     }
     .hero-lead {
-      margin-top: 14px;
-      font-size: 24px;
-      line-height: 1.4em;
+      margin-top: 30px;
+      font-size: 35px;
+      line-height: 52px;
       font-weight: 700;
     }
     .hero-text {
-      margin-top: 34px;
-      font-size: 12px;
+      margin-top: 24px;
     }
     .qmk-logo {
       background: url(../images/qmk_logo.svg) 0 0 no-repeat;
@@ -263,8 +218,8 @@ content - hero
     padding: 0;
     margin-top: 0;
     .hero-image {
-      width: 100%;
-      height: 75vw;
+      width: 750px;
+      height: 563px;
       background: #fff url(/images/palette1202.jpg) 50% 50% no-repeat;
       background-size: contain;
     }
@@ -313,12 +268,6 @@ content - introduction
 .content_section-introduction {
   @media screen and (min-width: 751px) {
     margin-top: 59px;
-    .section_header {
-      background-position: 0 0;
-    }
-    .inner_section_header {
-      background: url(../images/header-intro-pc.png) 0 0 no-repeat;
-    }
   }
   @media screen and (max-width: 750px) {
     margin-top: 78px;
@@ -336,8 +285,6 @@ content - buy
       background-position: 0 -50px;
     }
     .inner_section_header {
-      background: url(../images/header-buy-pc.png) 0 0 no-repeat;
-      width: 70px;
       margin: 0 auto;
     }
     .buy-notice {
@@ -356,20 +303,9 @@ content - buildGuide
 .content_section-buildGuide {
   @media screen and (min-width: 751px) {
     margin-top: 59px;
-    .section_header {
-      background-position: 0 -100px;
-    }
     .build-introduction {
-      .inner_section_header {
-        background-image: url(../images/header-buildGuide-pc.png);
-        width: 279px;
-      }
     }
     .build-procedure {
-      .inner_section_header {
-        background-image: url(../images/header-buildGuideProc-pc.png);
-        width: 254px;
-      }
     }
   }
   @media screen and (max-width: 750px) {
