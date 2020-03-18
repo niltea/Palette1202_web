@@ -61,9 +61,10 @@ wrapper
     position: relative;
     outline: none;
     text-decoration: none;
+    background-color: #fff;
     &,
     &:visited {
-      color: #1099e0;
+      color: #000;
     }
     &:after {
       content: "";
@@ -74,16 +75,15 @@ wrapper
       bottom: auto;
       margin-top: -3px;
       height: 1px;
-      background: #1099e0;
+      background: #000;
       transition: background-color .2s linear 0s;
       z-index:1
     }
     @media screen and (min-width: 751px) {
       transition: color 0.2s, background 0.2s;
-      background-color: #fefefe;
       &:hover {
         text-decoration: none;
-        background-color: #1099e0;
+        background-color: #000;
         color: #fff;
         &:after {
           opacity: 0;
@@ -92,13 +92,12 @@ wrapper
     }
     @media screen and (max-width: 750px) {
       transition: color 0.2s, background 0.2s;
-      background-color: #fefefe;
       &:active {
         text-decoration: none;
-        background-color: #1099e0;
-        color: #fefefe;
+        background-color: #000;
+        color: #fff;
         &:after {
-          background: #fefefe;
+          opacity: 0;
         }
       }
     }
