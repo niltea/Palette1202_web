@@ -87,15 +87,6 @@ body {
     height: 205px;
   }
 }
-.load-container {
-  transform: translateY(30px);
-  opacity: 0;
-  transition: opacity 450ms cubic-bezier(0.19, 1, 0.22, 1), transform 450ms cubic-bezier(0.19, 1, 0.22, 1);
-  &.triggered {
-    transform: none;
-    opacity: 1;
-  }
-}
 
 .wrapper {
   width: 100%;
@@ -106,7 +97,7 @@ body {
   //overflow-x: hidden;
   @media screen and (min-width: 751px) {
     .onlySP {display: none;}
-    padding-bottom: 50px;
+    padding: 50px 0 50px;
   }
   @media screen and (max-width: 750px) {
     width: 750px;
@@ -125,41 +116,52 @@ content - common
   position: relative;
   margin: 0 auto;
   width: 100%;
-  .content_inner {
-    margin: 0 auto;
-  }
   .section_header {
-    font-weight: 800;
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 200;
+    font-style: italic;
     text-align: center;
   }
   .inner_section {
-  }
-  .inner_section_header {
-    font-weight: 800;
+    .inner_section_header {
+      font-weight: 800;
+    }
   }
   @media screen and (min-width: 751px) {
     font-size: 16px;
     line-height: 1.75em;
     padding: 0 50px 90px;
     & + .content_section {
-      margin-top: 90px;
+      margin-top: 96px;
     }
     .section_header {
       font-size: 58px;
     }
     .inner_section {
       margin-top: 80px;
-    }
-    .inner_section_header {
+      .inner_section_header {
+      }
     }
   }
   @media screen and (max-width: 750px) {
-    padding: 0 50px;
-    font-size: 20px;
-    line-height: 43px;
-    margin-top: 40px;
+    font-size: 28px;
+    line-height: 48px;
     & + .content_section {
-      margin-top: 80px;
+      margin-top: 182px;
+    }
+    .section_header {
+      font-size: 90px;
+    }
+    .inner_section {
+      margin-top: 160px;
+      .inner_section_header {
+        padding: 0 25px;
+        font-size: 48px;
+        line-height: 1.25;
+      }
+      p {
+        padding: 0 25px 49px;
+      }
     }
   }
 }
@@ -168,96 +170,90 @@ content - common
 content - hero
 ================== */
 .content_section-hero {
-  h1 {
-    @include txtHide;
-    //logo
-  }
-  @media screen and (min-width: 751px) {
-    padding-top: 70px;
-    display: flex;
-    justify-content: space-between;
-    .hero-image {
-      width: 555px;
-      height: 490px;
-      background: #fff url(http://placehold.jp/000000/555x490.png) center 50% no-repeat;
-    }
-    //content
-    .hero-content {
-      position: relative;
-      margin-left: 20px;
-      width: 325px;
-      max-height: 495px;
-      padding-top: 24px;
-      padding-bottom: 60px;
-    }
+  .hero-content {
+    position: relative;
     h1 {
+      //logo
+      @include txtHide;
       background: url(../images/logo.svg) 0 0 no-repeat;
-      width: 213px;
-      height: 120px;
       background-size: 100% auto;
     }
     .hero-lead {
-      margin-top: 30px;
-      font-size: 35px;
-      line-height: 52px;
       font-weight: 700;
     }
-    .hero-text {
-      margin-top: 24px;
-    }
     .qmk-logo {
+      display: block;
       background: url(../images/qmk_logo.svg) 0 0 no-repeat;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 40px;
+    }
+  }
+  @media screen and (min-width: 751px) {
+    display: flex;
+    .hero-image {
+      background: url(http://placehold.jp/000000/555x490.png) center 50% no-repeat;
+      width: 555px;
+      height: 490px;
+    }
+    //content
+    .hero-content {
+      margin-left: 20px;
+      width: 325px;
+      padding-top: 24px;
+      padding-bottom: 60px;
+      h1 {
+        width: 213px;
+        height: 120px;
+      }
+      .hero-lead {
+        margin-top: 30px;
+        font-size: 35px;
+        line-height: 52px;
+      }
+      .hero-text {
+        margin-top: 24px;
+      }
+      .qmk-logo {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 180px;
+        height: 40px;
+      }
     }
   }
   @media screen and (max-width: 750px) {
     padding: 0;
-    margin-top: 0;
     .hero-image {
+      background: url(http://placehold.jp/000000/750x662.png) center 50% no-repeat;
       width: 750px;
-      height: 563px;
-      background: #fff url(/images/palette1202.jpg) 50% 50% no-repeat;
-      background-size: contain;
+      height: 662px;
     }
     //content
     .hero-content {
       position: relative;
-      padding: 0 50px;
-    }
-    .hero-spacer {
-      display: none;
-    }
-    h1 {
-      position: absolute;
-      right: 50px;
-      bottom: 70px;
-      background: url(../images/logo.svg) 0 0 no-repeat;
-      width: 200px;
-      height: 112px;
-      background-size: 100% auto;
-    }
-    .hero-lead {
-      margin-top: 80px;
-      font-size: 34px;
-      line-height: 1.4em;
-      font-weight: 700;
-    }
-    .hero-text {
-      margin-top: 70px;
-      font-size: 26px;
-      line-height: 48px;
-    }
-    .qmk-logo {
-      background: url(../images/qmk_logo.svg) 0 0 no-repeat;
-      position: absolute;
-      right: 50px;
-      bottom: 0;
-      width: 200px;
-      height: 50px;
+      padding: 0 25px;
+      h1 {
+        position: absolute;
+        right: 25px;
+        bottom: 116px;
+        width: 220px;
+        height: 123px;
+      }
+      .hero-lead {
+        margin-top: 57px;
+        font-size: 38px;
+        line-height: 1.4em;
+        text-align: center;
+      }
+      .hero-text {
+        margin-top: 48px;
+        width: 460px;
+        text-align: right;
+      }
+      .qmk-logo {
+        margin: 60px auto 0;
+        width: 220px;
+        height: 55px;
+      }
     }
   }
 }
