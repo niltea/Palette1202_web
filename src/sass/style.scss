@@ -43,7 +43,7 @@ wrapper
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  font-family: source-han-sans-japanese, sans-serif;
+  font-family: azo-sans-web, source-han-sans-japanese, sans-serif;
   //overflow-x: hidden;
   @media screen and (min-width: 751px) {
     .onlySP {display: none;}
@@ -463,6 +463,9 @@ content - buildGuide
       align-items: center;
     }
   }
+  p.tools {
+    text-align: left;
+  }
   @media screen and (min-width: 751px) {
     .table {
       width: 670px;
@@ -479,7 +482,9 @@ content - buildGuide
         padding-right: 115px;
       }
     }
-    .build-procedure {
+    p.tools {
+      width: 670px;
+      margin: 0 auto;
     }
   }
   @media screen and (max-width: 750px) {

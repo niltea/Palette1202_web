@@ -1,13 +1,13 @@
 extends _include/_base
 block vars
-    - var isTop = true
-    - var addClass = ''
-    - var PugPageClass = 'top'
+    - const isTop = true
+    - const addClass = ''
+    - const PugPageClass = 'top'
 block title
     title Palette1202
 block meta
     //- Page Setting
-    meta(name='description', content="イラストレーター向けアシストデバイス Palette1202、登場。")
+    meta(name='description', content="イラストレーター向け片手デバイス Palette1202、登場。")
     meta(name='Keywords', content="左手デバイス")
     meta(name="viewport" content='width=750,user-scalable=yes')
     meta(name="apple-mobile-web-app-title", content="")
@@ -19,13 +19,13 @@ block meta
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content="@niltea")
     meta(name="twitter:title" content="Palette1202")
-    meta(name="twitter:description" content="イラストレーター向けアシストデバイス Palette1202、登場。")
+    meta(name="twitter:description" content="イラストレーター向け片手デバイス Palette1202、登場。")
     meta(name="twitter:image:src" content="http://palette1202.nilgiri-tea.net/images/ogp.png")
     meta(property="og:url" content="http://palette1202.nilgiri-tea.net/")
     meta(property="og:type" content="website")
     meta(property="og:title" content="Palette1202")
     meta(property="og:site_name" content="Palette1202")
-    meta(property="og:description" content="イラストレーター向けアシストデバイス Palette1202、登場。")
+    meta(property="og:description" content="イラストレーター向け片手デバイス Palette1202、登場。")
     meta(property="og:image" content="http://palette1202.nilgiri-tea.net/images/ogp.png")
 block body
     div#wrapper.wrapper.loaderTarget
@@ -34,7 +34,7 @@ block body
             .hero-content
                 h1.hero-logo Palette1202
                 .hero-lead いい感じのコピーが<br class="onlyPC">出てこないな。
-                .hero-text イラストレーター向けアシストデバイス、Palette1202。<br>12個のキーと2つのダイヤルで、<br>イラスト制作をよりスムーズに。
+                .hero-text イラストレーター向け片手デバイス、Palette1202。<br>12個のキーと2つのダイヤルで、<br>イラスト制作をよりスムーズに。
                 a.qmk-logo.hoverOpacity(href="https://qmk.fm", target="_blank")
 
         .content_section.content_section-introduction
@@ -43,31 +43,35 @@ block body
                 .inner_section_content.content-figure
                     h3.inner_section_header Palette1202とは？
                     .text-container.upper
-                        p Clip StudioやPhotoshopといった、イラスト制作ソフトの操作を効率化するために開発されたアシストデバイスです。
+                        p Clip StudioやPhotoshopといった、イラスト制作ソフトの操作を効率化するために開発された片手デバイスです。
                     figure
-                        img(src="http://placehold.jp/000000/555x370.png")
+                        img(src="http://placehold.jp/000000/555x383.png")
                     .text-container.lower
-                        p 12個のキー、そして2個のダイヤルは予めショートカットキーが割当てられており、イラスト制作を最大限に効率化することができます。
+                        p 12個のキー、そして2個のダイヤルは予めショートカットキーが割当てられており、作業を効率化することができます。
                         a.link-button(href="/files/palette1202_default_keymap-20191229.pdf") キー割当一覧(PDF)
             section.inner_section.text-left
                 .inner_section_content.content-figure
                     h3.inner_section_header BLE Micro Pro対応
                     .text-container.upper
-                        p 電池ケースを取り付けることで、BLE Micro Pro(別売)への電源供給が可能。
-                            |ソースコードもご用意していますので、容易に無線化することができます。
+                        p
+                            |BLE Micro Proに標準対応し、無線化キット（別売）をご用意しています。特別な改造なしでへの電源供給が可能となります。
+                    figure
+                        img(src="http://placehold.jp/000000/555x383.png")
+                    .text-container.lower
+                        p
+                            |BLE Micro Proのファームウェアもご用意していますので、比較的容易に無線化することができます。
+                        a.link-button(href="/files/palette1202_default_keymap-20191229.pdf") BMP用コード(zip)
+            section.inner_section.text-right
+                .inner_section_content.content-figure
+                    h3.inner_section_header 左手・右手両対応
+                    .text-container.upper
+                        p
+                            |お好みに応じ、基板の裏表で左手用・右手用どちらにも対応できるため、左利きの方でもご使用いただけます。
                     figure
                         img(src="http://placehold.jp/000000/555x370.png")
                     .text-container.lower
-                        p 煩雑な配線から開放され、持ち運びに便利なだけでなく、デスクトップで使用するときもストレスフリーです。
-            section.inner_section.text-right
-                .inner_section_content.content-figure
-                    h3.inner_section_header 左・右利き両対応
-                    .text-container.upper
-                        p 左手・右手両対応することで、左利きの方もご使用いただけます。<br>
-                            | また、イラスト制作用のデバイスのみならず、<br>
-                            | 事務作業用のマクロパッドとして使用することも可能です。
-                    figure
-                        img(src="http://placehold.jp/000000/555x370.png")
+                        p
+                            |利き手側で使うこともできるので、イラスト制作用の片手デバイスのみならず、事務作業用のマクロパッドとして使用することも可能です。
         .content_section.content_section-buy
             h2.section_header How To Buy
             section.inner_section.buy-shops
@@ -95,8 +99,7 @@ block body
                     h3.inner_section_header 部品一覧
                     .text-container
                         p
-                            | 不足の際は直ちに部品をお送りしますので、<br>
-                            | お手数ではございますがご連絡をお願いします。
+                            | 不足の際は、お手数ではございますがご連絡をお願いします。
                     .table
                         dl.table-item
                             dt メイン基板
@@ -108,7 +111,20 @@ block body
                             dt MX用 HotSwap ソケット<br>
                             dd 12個
                         dl.table-item
-                            dt ロータリーエンコーダー
+                            dt ロータリーエンコーダー・つまみ
+                            dd 各2個
+                        dl.table-item
+                            dt パネル<br>
+                                span.note トップパネル・ボトムパネル・マイコンカバー
+                            dd 各1枚
+                        dl.table-item
+                            dt ねじ(M2 x 3mm)
+                            dd 12個
+                        dl.table-item
+                            dt スペーサー(M2 x 7mm)
+                            dd 6個
+                        dl.table-item
+                            dt スペーサー(M2 x 8mm)
                             dd 2個
 
             section.inner_section
@@ -147,13 +163,27 @@ block body
                             dt USBケーブル
                             dd 1本
                     .text-container
-                        p
+                        p.tools
                             |また、下記の工具等が必要となります。<br>
-                            |はんだごて：調温できる物だと◎
+                            |・はんだごて：調温できる物だと作業しやすいです。
                             br
-                            |はんだ
+                            |・はんだ：goot&nbsp;
+                            a(href="http://www.goot.jp/handakanren/sd-62/", target="_blank") SD-62
+                            |推奨
                             br
-                            |精密ドライバー
+                            |・はんだ吸い取り線：ブリッジ除去等に必須。
+                            br
+                            |・フラックス＆フラックスクリーナー：はんだ不良予防のために、使用をお勧めします。
+                            br
+                            |・ピンセット：goot&nbsp;
+                            a(href="http://www.goot.jp/handakanren/ts-15/", target="_blank") TS-15
+                            |が安価かつ使いやすいです。
+                            br
+                            |・精密ドライバー：VESSEL&nbsp;
+                            a(href="https://www.vessel.co.jp/product/screwdriver/detail/251358", target="_blank") TD-51
+                            |など。
+                            br
+                            |・その他ラジオペンチ・ニッパー等があれば便利です。
 
             .build-procedure
                 section.inner_section.text-right
@@ -171,18 +201,27 @@ block body
                     .inner_section_content.content-figure
                         .text-container.upper
                             p
-                                |左手側は、このようにジャンパを短絡します。
+                                |右手側・左手側のいずれかに応じて、図の位置のジャンパにハンダを乗せ、短絡します。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 
                 section.inner_section.text-right
                     .inner_section_content.content-figure
-                        h3.inner_section_header ダイオードの取り付け
+                        h3.inner_section_header ダイオード
                         .text-container.upper
                             p
                                 |基本的に、背の低い部品から先に取り付けていきます。
-                                |まずはダイオードのハンダ付けを行います。
-                                | 部品に印字された線と基板の線がそろうようにハンダ付けを行ってください。
+                            p
+                                |まずはダイオードをハンダ付けします。
+                                |部品に印字された線と基板の線がそろうようにハンダ付けを行ってください。<br>
+                                |向きを誤ると正常動作しなくなりますので、特に注意してください。
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                    .inner_section_content.content-figure
+                        .text-container.upper
+                            p
+                                |片方のパターンにハンダを乗せ、ダイオードをずらすと実装しやすいです。<br>
+                                |※もし表面実装が難しければ、スルーホール実装用のダイオード（別売り）を使用することもできます。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 
@@ -210,32 +249,49 @@ block body
                         h3.inner_section_header Pro Micro
                         .text-container.upper
                             p
-                                |「コンスルー」をPro Microにハンダ付けします。※向きがあるので注意<br>
-                                |そのまま基板に差し、とりつけ完了です。<br>
-                                |基板側はハンダ付けしません。（ハンダ付けするとPro Microが取り外せなくなります）
+                                |コンスルー（またはピンヘッダ）をPro Microにハンダ付けします。
+                                |※推奨される向きがあるので注意。<br>
+                                |コンスルーを使用する場合、基板側はハンダ付けしません。（ハンダ付けするとPro Microが取り外せなくなります）
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
                 section.inner_section.text-right
                     .inner_section_content.content-figure
-                        h3.inner_section_header ロータリーエンコーダー
+                        h3.inner_section_header OLED
                         .text-container.upper
                             p
-                                |ロータリーエンコーダーを付けます。
-                                |表面から差し込み、ハンダ付けしてください。
+                                |※本項目はオプションです。<br>
+                                |OLED用のピンソケット・ピンヘッダをハンダ付けします。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
                 section.inner_section.text-right
                     .inner_section_content.content-figure
-                        h3.inner_section_header 仮動作確認
+                        h3.inner_section_header エンコーダー
                         .text-container.upper
                             p
-                                |この時点で特に問題がなければハンダ付けは終わりです。
-                                |動作確認を行うため、下記コマンドでPro Microにファームウェアを書き込みます。
+                                |ロータリーエンコーダーを付けます。<br>
+                                |表面から差し込み、5本のピンをハンダ付けしてください。<br>
+                                |※太い足はハンダ付けしなくても動作に支障はありません。
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                section.inner_section.text-right
+                    .inner_section_content.content-figure
+                        h3.inner_section_header ファーム書き込み
+                        .text-container.upper
+                            p
+                                |この時点で特に問題がなければハンダ付けは終わりです。<br>
+                                |動作確認を行うため、下記コマンドでPro Microに動作確認用ファームを書き込みます。<br>
                                 |make palette1202:key-check:avrdude
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                    .inner_section_content.content-figure
+                        .text-container.upper
                             p
-                                |ソケットにキースイッチを差し込み、キー押下すると対応する文字が入力されるはずです。
-                                |上手く動かない場合はハンダ付け不良・ダイオードの向きに誤りがある可能性が高いので、ご確認ください。
-                                a() キー対応表はこちら
+                                |書き込みが正常終了したら、キースイッチソケットにスイッチを差し込みます。<br>
+                                |各キー押下・エンコーダー回転/押し込みで対応する文字が入力されるはずです。
+                        .text-container.lower
+                            p
+                                |正常に動かない場合、ここまでの工程に誤りがないか（特にダイオードの向き）、ハンダ不良がないか、またPro Microの差し込み位置が正しいか確認しましょう。
+                                a.link-button(href="/files/palette1202_default_keymap-20191229.pdf") キー対応表(PDF)
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 
@@ -244,19 +300,47 @@ block body
                         h3.inner_section_header パネル類
                         .text-container.upper
                             p
-                                |動作に問題がなければ、キースイッチをいったん外し、パネル類を取り付けます。
-                                |フロントパネルにスペーサーをねじで固定します。
+                                |動作に問題がなければ、キースイッチをいったん外し、パネル類を組み付けます。
+
+                            p
+                                |マイコンカバー用のスペーサー(x2)を基板に取り付けます。<br>
+                                |OLEDを使用する場合は8mm、使用しない場合は7mmのスペーサーを使用してください。
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                    .inner_section_content.content-figure
+                        .text-container.upper
+                            p
+                                |フロントパネルにスペーサー(x4)をねじで固定します。<br>
+                                |キースイッチの種類によりスペーサーが異なります。<br>
+                                |MX互換を使用する場合は7mm、Chocの場合はxmmのスペーサーを使用してください。
                             p
                                 |スペーサーを基板に通し、バックパネルをねじで固定します。
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                    .inner_section_content.content-figure
+                        .text-container.upper
+                            p
+                                |マイコンカバーをねじで固定します。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 
                 section.inner_section.text-right
                     .inner_section_content.content-figure
-                        h3.inner_section_header キースイッチ・キャップ
+                        h3.inner_section_header 仕上げ
                         .text-container.upper
                             p
-                                |キースイッチを再度取り付け、キーキャップ・ロータリーエンコーダーのつまみを取り付けます。
+                                |キースイッチを再度取り付け、キーキャップ・エンコーダーのつまみを取り付けます。<br>
+                                |※秋葉原などの電子部品店で販売されているノブを付ける事もできます。使い心地も変わってきますので、お気に入りを見つけてみましょう。
+                        figure
+                            img(src="http://placehold.jp/000000/555x370.png")
+                    .inner_section_content.content-figure
+                        .text-container.upper
+                            p
+                                |動作確認用ファームと同じ要領で、下記のコマンドを使用してファームを書き込みます。<br>
+                                |make palette1202:key-check:avrdude
+                        .text-container.lower
+                            p
+                                |問題なく書き込めれば、完成です。<br>お疲れ様でした。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 

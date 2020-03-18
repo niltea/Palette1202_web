@@ -1,10 +1,10 @@
 //- vars
 block vars
-- var pageClass = isTop ? 'page--top wf-loading '+ addClass : 'page--children wf-loading '+ addClass
-- var pageName = isTop ? '' : pageTitle + ' | '
-- var pageDispTitle = pageName + options.siteName
-- var description = options.description
-- var keywords = options.keywords
+- const pageClass = isTop ? 'page--top wf-loading '+ addClass : 'page--children wf-loading '+ addClass
+- const pageName = isTop ? '' : pageTitle + ' | '
+- const pageDispTitle = pageName + options.siteName
+- const description = options.description
+- const keywords = options.keywords
 
 doctype html
 html(lang='ja', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#")
