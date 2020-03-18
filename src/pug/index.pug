@@ -40,29 +40,29 @@ block body
         .content_section.content_section-introduction
             h2.section_header Introduction
             section.inner_section.text-right
-                .content
+                .inner_section_content.content-figure
                     h3.inner_section_header Palette1202とは？
-                    .upper
+                    .text-container.upper
                         p Clip StudioやPhotoshopといった、イラスト制作ソフトの操作を効率化するために開発されたアシストデバイスです。
-                    .lower
-                        p 12個のキー、そして2個のダイヤルは予めショートカットキーが割当てられており、イラスト制作を最大限に効率化することができます。
-                        a(href="/files/palette1202_default_keymap-20191229.pdf") キー一覧表のダウンロード(PDF)
                     figure
                         img(src="http://placehold.jp/000000/555x370.png")
+                    .text-container.lower
+                        p 12個のキー、そして2個のダイヤルは予めショートカットキーが割当てられており、イラスト制作を最大限に効率化することができます。
+                        a.link-button(href="/files/palette1202_default_keymap-20191229.pdf") キー割当一覧(PDF)
             section.inner_section.text-left
-                .content
+                .inner_section_content.content-figure
                     h3.inner_section_header BLE Micro Pro対応
-                    .upper
+                    .text-container.upper
                         p 電池ケースを取り付けることで、BLE Micro Pro(別売)への電源供給が可能。
                             |ソースコードもご用意していますので、容易に無線化することができます。
-                    .lower
-                        p 煩雑な配線から開放され、持ち運びに便利なだけでなく、デスクトップで使用するときもストレスフリーです。
                     figure
                         img(src="http://placehold.jp/000000/555x370.png")
+                    .text-container.lower
+                        p 煩雑な配線から開放され、持ち運びに便利なだけでなく、デスクトップで使用するときもストレスフリーです。
             section.inner_section.text-right
-                .content
+                .inner_section_content.content-figure
                     h3.inner_section_header 左・右利き両対応
-                    .upper
+                    .text-container.upper
                         p 左手・右手両対応することで、左利きの方もご使用いただけます。<br>
                             | また、イラスト制作用のデバイスのみならず、<br>
                             | 事務作業用のマクロパッドとして使用することも可能です。
@@ -88,11 +88,11 @@ block body
         .content_section.content_section-buildGuide
             h2.section_header Build Guide
             section.inner_section
-                .content
+                .inner_section_content
                     p
                         |このガイドでは、Palette 1202の組み立て手順を解説します。
             section.inner_section
-                .content
+                .inner_section_content
                     h3.inner_section_header 部品一覧
                     p
                         | 不足の際は直ちに部品をお送りしますので、<br>
@@ -109,7 +109,7 @@ block body
                         dd 2個
 
             section.inner_section
-                .content
+                .inner_section_content
                     h3.inner_section_header 別売部品
                     p
                         |本キットの他、別途下記部品が必要です。
@@ -144,26 +144,26 @@ block body
 
             .build-procedure
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content.content-figure
                         h3.inner_section_header 基板の確認
-                        .upper
+                        .text-container.upper
                             p
                                 |基本的に基板の裏側をハンダ付けする設計となっています。
                                 |左手で使う場合、Pro Microが右上に来る面が裏側です。
                                 |右手の場合は、逆にPro Microが左上に来る面が裏側です。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
-                    .content
-                        .upper
+                    .inner_section_content
+                        .text-container.upper
                             p
                                 |左手側は、このようにジャンパを短絡します。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
 
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header ダイオードの取り付け
-                        .upper
+                        .text-container.upper
                             p
                                 |基本的に、背の低い部品から先に取り付けていきます。
                                 |まずはダイオードのハンダ付けを行います。
@@ -172,41 +172,41 @@ block body
                             img(src="http://placehold.jp/000000/555x370.png")
 
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header Hot Swap ソケット
-                        .upper
+                        .text-container.upper
                             p
                                 | ソケットは向きがあり、向きを間違えるとキースイッチが取り付けられません。<br>
                                 | 基板上のシルク印刷を確認し、取り付けてください。
 
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header リセットスイッチ
-                        .upper
+                        .text-container.upper
                             p
                                 |リセットスイッチを付けます。
                                 |表面からスイッチを差し込み、ハンダ付けしてください。
                         figure
                             img(src="http://placehold.jp/000000/555x370.png")
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header Pro Micro
-                        .upper
+                        .text-container.upper
                             p
                                 |「コンスルー」をPro Microにハンダ付けします。※向きがあるので注意<br>
                                 |そのまま基板に差し、とりつけ完了です。<br>
                                 |基板側はハンダ付けしません。（ハンダ付けするとPro Microが取り外せなくなります）
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header ロータリーエンコーダー
-                        .upper
+                        .text-container.upper
                             p
                                 |ロータリーエンコーダーを付けます。
                                 |表面から差し込み、ハンダ付けしてください。
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header 仮動作確認
-                        .upper
+                        .text-container.upper
                             p
                                 |この時点で特に問題がなければハンダ付けは終わりです。
                                 |動作確認を行うため、下記コマンドでPro Microにファームウェアを書き込みます。
@@ -217,9 +217,9 @@ block body
                                 a() キー対応表はこちら
 
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header パネル類
-                        .upper
+                        .text-container.upper
                             p
                                 |動作に問題がなければ、キースイッチをいったん外し、パネル類を取り付けます。
                                 |フロントパネルにスペーサーをねじで固定します。
@@ -227,9 +227,9 @@ block body
                                 |スペーサーを基板に通し、バックパネルをねじで固定します。
 
                 section.inner_section.text-right
-                    .content
+                    .inner_section_content
                         h3.inner_section_header キースイッチ・キャップ
-                        .upper
+                        .text-container.upper
                             p
                                 |キースイッチを再度取り付け、キーキャップ・ロータリーエンコーダーのつまみを取り付けます。
 
