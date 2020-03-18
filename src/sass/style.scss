@@ -163,6 +163,7 @@ content - common
     text-align: center;
   }
   .inner_section {
+    margin: 0 auto;
     .inner_section_header {
       font-weight: 800;
       line-height: 1.25em;
@@ -178,6 +179,10 @@ content - common
     .section_header {
       font-size: 58px;
       line-height: 1em;
+      + p {
+        padding-top: 33px;
+        text-align: center;
+      }
     }
     .inner_section {
       margin-top: 80px;
@@ -351,35 +356,37 @@ content - hero
 /* ===============
 content - introduction
 ================== */
-.content_section-introduction {
-  @media screen and (min-width: 751px) {
-    margin-top: 59px;
-  }
-  @media screen and (max-width: 750px) {
-    margin-top: 78px;
-    .section_header {}
-  }
-}
+//.content_section-introduction {}
 
 /* ===============
 content - buy
 ================== */
 .content_section-buy {
   @media screen and (min-width: 751px) {
-    margin-top: 59px;
-    .section_header {
-      background-position: 0 -50px;
-    }
-    .inner_section_header {
-      margin: 0 auto;
+    .buy-shops {
+      width: 440px;
+      dl {
+        display: flex;
+        + dl {
+          margin-top: 30px;
+        }
+      }
+      dt {
+        width: 150px;
+      }
+      dd {
+        margin-left: 20px;
+        font-size: 13px;
+        line-height: 1.5em;
+        display: flex;
+        align-items: center;
+      }
     }
     .buy-notice {
       text-align: center;
     }
   }
   @media screen and (max-width: 750px) {
-    margin-top: 78px;
-    .section_header {}
   }
 }
 
