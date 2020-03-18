@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     util.setScrollTop(0);
     // loader
-    scrollEffect.init();
+    // scrollEffect.init();
   }, 500);
 });
 

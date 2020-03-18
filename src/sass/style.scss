@@ -235,27 +235,38 @@ content - common
     font-size: 28px;
     line-height: 48px;
     & + .content_section {
-      margin-top: 182px;
+      margin-top: 188px;
     }
     .section_header {
       font-size: 90px;
+      + p {
+        padding-top: 66px;
+        text-align: center;
+      }
     }
     .inner_section {
       margin-top: 160px;
+      + .inner_section {
+        margin-top: 148px;
+      }
       .inner_section_content + .inner_section_content {
         margin-top: 66px;
       }
+      figure {
+        margin-top: 59px;
+      }
       .inner_section_header {
+        text-align: center;
         padding: 0 25px;
         font-size: 48px;
       }
       .text-container {
         padding: 0 25px;
         p {
-          margin-top: 66px;
+          margin-top: 50px;
         }
         .link-button {
-          margin-top: 35px;
+          margin-top: 55px;
         }
         &:first-child p {
           padding-top: 0;
@@ -395,6 +406,29 @@ content - buy
     }
   }
   @media screen and (max-width: 750px) {
+    .buy-shops {
+      dl {
+        text-align: center;
+        + dl {
+          margin-top: 70px;
+        }
+      }
+      dt {
+        a {
+          display: inline-block;
+          margin: 0 auto;
+        }
+        img {
+          width: auto;
+        }
+      }
+      dd {
+        margin-top: 40px;
+      }
+    }
+    .buy-notice {
+      text-align: center;
+    }
   }
 }
 
@@ -450,7 +484,21 @@ content - buildGuide
     }
   }
   @media screen and (max-width: 750px) {
-    .section_header {}
+    .table {
+      width: 700px;
+      margin-top: 40px;
+      .table-item {
+        padding: 26px 0;
+      }
+      dt {
+        width: 580px;
+      }
+      dd {
+        width: 100px;
+      }
+    }
+    .build-procedure {
+    }
   }
 }
 
