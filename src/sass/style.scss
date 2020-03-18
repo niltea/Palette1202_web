@@ -47,7 +47,7 @@ wrapper
   //overflow-x: hidden;
   @media screen and (min-width: 751px) {
     .onlySP {display: none;}
-    padding: 50px 0 50px;
+    padding: 50px 0 0;
   }
   @media screen and (max-width: 750px) {
     width: 750px;
@@ -221,6 +221,9 @@ content - common
         .link-button {
           margin-top: 35px;
         }
+        &:first-child p {
+          padding-top: 0;
+        }
       }
       .inner_section_header {
         margin-top: -14px;
@@ -248,10 +251,15 @@ content - common
       }
       .text-container {
         padding: 0 25px;
-      }
-      p {
-        margin-top: 66px;
-        padding-bottom: 49px;
+        p {
+          margin-top: 66px;
+        }
+        .link-button {
+          margin-top: 35px;
+        }
+        &:first-child p {
+          padding-top: 0;
+        }
       }
       img {
         width: 100%;
