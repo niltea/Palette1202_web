@@ -88,60 +88,72 @@ block body
                         | 組み立て方法をご確認のうえ、別途ご用意ください。
         .content_section.content_section-buildGuide
             h2.section_header Build Guide
+            p
+                |このガイドでは、Palette 1202の組み立て手順を解説します。
             section.inner_section
-                .inner_section_content
-                    p
-                        |このガイドでは、Palette 1202の組み立て手順を解説します。
-            section.inner_section
-                .inner_section_content
+                .inner_section_content.table-container
                     h3.inner_section_header 部品一覧
-                    p
-                        | 不足の際は直ちに部品をお送りしますので、<br>
-                        | お手数ではございますがご連絡をお願いします。
-                    dl.table
-                        dt メイン基板
-                        dd 1枚
-                        dt ダイオード（表面実装用）
-                            span.note ※実装が難しい方は、別途リードタイプをご用意ください。
-                        dd 14個
-                        dt MX用 HotSwap ソケット
-                            span.note ※Kailh Chocスイッチを使用する際は別途ご用意ください。
-                        dt ロータリーエンコーダー
-                        dd 2個
+                    .text-container
+                        p
+                            | 不足の際は直ちに部品をお送りしますので、<br>
+                            | お手数ではございますがご連絡をお願いします。
+                    .table
+                        dl.table-item
+                            dt メイン基板
+                            dd 1枚
+                        dl.table-item
+                            dt ダイオード（表面実装用）<br>
+                            dd 14個
+                        dl.table-item
+                            dt MX用 HotSwap ソケット<br>
+                            dd 12個
+                        dl.table-item
+                            dt ロータリーエンコーダー
+                            dd 2個
 
             section.inner_section
-                .inner_section_content
+                .inner_section_content.table-container
                     h3.inner_section_header 別売部品
-                    p
-                        |本キットの他、別途下記部品が必要です。
-                    dl.table
-                        dt Pro Micro (またはBLE Micro Pro)
-                        dd 1個
-                        dt コンスルーまたはピンヘッダ
-                        dd 2個
-                        dt ダイオード(1N4148・リードタイプ)
-                            span.note ※付属の表面実装ダイオードの使用が難しい方のみ。
-                        dd 14個
-                        dt Kailh Choc用 HotSwap ソケット
-                            span.note ※Kailh Chocスイッチを使用する際のみ。
-                        dd 12個
-                        dt キースイッチ(MX互換またはKailh Choc やや重めのリニアがおすすめです)
-                        dd 12個
-                        dt キーキャップ
-                        dd 12個
-                        dt OLED ディスプレイ
-                            span.note ※オプション
-                        dd 1個
-                        dt USBケーブル
-                        dd 1本
-                    p
-                        |また、下記の工具等が必要となります。<br>
-                    p.align-center
-                        |はんだごて：調温できる物だと◎
-                        br
-                        |はんだ
-                        br
-                        |精密ドライバー
+                    .text-container
+                        p
+                            |本キットの他、別途下記部品が必要です。
+                    .table
+                        dl.table-item
+                            dt Pro Micro(またはBLE Micro Pro)
+                            dd 1個
+                        dl.table-item
+                            dt コンスルー(またはピンヘッダ)
+                            dd 2個
+                        dl.table-item
+                            dt ダイオード(1N4148・リードタイプ)<br>
+                                span.note ※付属の表面実装ダイオードの使用が難しい場合のみ
+                            dd 14個
+                        dl.table-item
+                            dt Kailh Choc用 HotSwap ソケット<br>
+                                span.note ※Kailh Chocスイッチを使用する場合のみ
+                            dd 12個
+                        dl.table-item
+                            dt キースイッチ<br>
+                                span.note (MX互換またはKailh Choc)<br>※やや重めのリニアがおすすめです
+                            dd 12個
+                        dl.table-item
+                            dt キーキャップ
+                            dd 12個
+                        dl.table-item
+                            dt OLED ディスプレイ<br>
+                                span.note ※オプション
+                            dd 1個
+                        dl.table-item
+                            dt USBケーブル
+                            dd 1本
+                    .text-container
+                        p
+                            |また、下記の工具等が必要となります。<br>
+                            |はんだごて：調温できる物だと◎
+                            br
+                            |はんだ
+                            br
+                            |精密ドライバー
 
             .build-procedure
                 section.inner_section.text-right

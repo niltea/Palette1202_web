@@ -394,15 +394,54 @@ content - buy
 content - buildGuide
 ================== */
 .content_section-buildGuide {
+  .table-container {
+    text-align: center;
+  }
+  .table {
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    .table-item {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #000;
+    }
+    dt, dd {
+      width: 50%;
+      .note {
+        font-weight: 400;
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+    }
+    dt {
+      font-weight: 700;
+    }
+    dd {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   @media screen and (min-width: 751px) {
-    margin-top: 59px;
-    .build-introduction {
+    .table {
+      width: 670px;
+      margin-top: 40px;
+      .table-item {
+        padding: 16px 0;
+      }
+      dt {
+        width: 325px;
+        padding-left: 115px;
+      }
+      dd {
+        width: 96px;
+        padding-right: 115px;
+      }
     }
     .build-procedure {
     }
   }
   @media screen and (max-width: 750px) {
-    margin-top: 78px;
     .section_header {}
   }
 }
