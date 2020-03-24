@@ -25,6 +25,7 @@ loader
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   &.loaded {
     opacity: 0;
     height: 0;
@@ -197,6 +198,10 @@ content - common
       .content-figure {
         padding-left: 575px;
         min-height: 376px;
+        img {
+          width: 555px;
+          height: auto;
+        }
       }
       figure {
         position: absolute;
@@ -220,13 +225,13 @@ content - common
         .link-button {
           margin-top: 35px;
         }
-        &:first-child p {
-          padding-top: 0;
-        }
       }
       .inner_section_header {
         margin-top: -14px;
         font-size: 32px;
+      }
+      .inner_section_content + .inner_section_content .text-container.upper p:first-child {
+        padding-top: 0;
       }
     }
   }
@@ -485,6 +490,68 @@ content - buildGuide
     p.tools {
       width: 670px;
       margin: 0 auto;
+    }
+    .inner_section {
+      .content-figure {
+        min-height: 76px;
+        &.check_board01 {
+          min-height: 353px;
+        }
+        &.bridge01 {
+          min-height: 356px;
+        }
+        &.bridge02 {
+          min-height: 481px;
+        }
+        &.diode01 {
+          min-height: 371px;
+        }
+        &.diode02 {
+          min-height: 355px;
+        }
+        &.diode03 {
+          min-height: 335px;
+        }
+        &.socket01 {
+          min-height: 311px;
+        }
+        &.rssw01 {
+          min-height: 375px;
+        }
+        &.promicro01 {
+          min-height: 376px;
+        }
+        &.oled01 {
+          min-height: 376px;
+        }
+        &.encoder01 {
+          min-height: 376px;
+        }
+        &.encoder02 {
+          min-height: 376px;
+        }
+        &.firm01 {
+          min-height: 380px;
+        }
+        &.firm02 {
+          min-height: 482px;
+        }
+        &.panel01 {
+          min-height: 376px;
+        }
+        &.panel02 {
+          min-height: 376px;
+        }
+        &.panel03 {
+          min-height: 432px;
+        }
+        &.finish01 {
+          min-height: 376px;
+        }
+        &.finish02 {
+          min-height: 376px;
+        }
+      }
     }
   }
   @media screen and (max-width: 750px) {
