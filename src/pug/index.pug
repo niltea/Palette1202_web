@@ -456,6 +456,13 @@ block body
             |  height: 100%;
             |  background-color: #000;
             |}
+        // Global site tag (gtag.js) - Google Analytics
+        script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-160648401-1")
+        script
+            |window.dataLayer = window.dataLayer || [];
+            |function gtag(){dataLayer.push(arguments);}
+            |gtag('js', new Date());
+            |gtag('config', 'UA-115478883-5');
 
 
 block script
