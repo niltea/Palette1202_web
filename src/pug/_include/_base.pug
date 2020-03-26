@@ -1,10 +1,10 @@
 //- vars
 block vars
-    - const thePageClass = `page--${PugPageClass}`
-    - const pageClass = isTop ? `page--top ${addClass}` : `${thePageClass} ${addClass}`
-    - const pageTitle = isTop ? options.siteName : `${options.siteName} | ${PugPageName}`
-    - const pageURL = rootUrl + PugFilePath
-    - const ogType = isTop ? "website" : "article"
+- const thePageClass = `page--${PugPageClass}`
+- const pageClass = isTop ? `page--top ${addClass}` : `${thePageClass} ${addClass}`
+- const pageTitle = isTop ? options.siteName : `${options.siteName} | ${PugPageName}`
+- const pageURL = rootUrl + PugFilePath
+- const ogType = isTop ? "website" : "article"
 
 doctype html
 html(lang='ja', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#")
@@ -21,7 +21,7 @@ html(lang='ja', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: 
         meta(name="application-name", content="Palette1202")
         meta(name="theme-color", content="#0025f0")
         meta(name="format-detection", content="telephone=no")
-        // link(rel="shortcut icon" href="/images/favicon.ico")
+        link(rel="shortcut icon" href="/images/favicon.ico")
         link(rel="apple-touch-icon" href="/img/apple-touch-icon.png")
 
         // OGP
