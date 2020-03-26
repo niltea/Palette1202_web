@@ -221,6 +221,14 @@ content - common
       .text-container {
         p {
           padding-top: 35px;
+          code {
+            display: inline-block;
+            padding: 0 1em;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.85em;
+            letter-spacing: 0.02em;
+          }
         }
         .link-button {
           margin-top: 35px;
@@ -230,7 +238,7 @@ content - common
         margin-top: -14px;
         font-size: 32px;
       }
-      .inner_section_content + .inner_section_content .text-container.upper p:first-child {
+      .text-container.upper:first-child p:first-child {
         padding-top: 0;
       }
     }
@@ -304,10 +312,13 @@ content - hero
       background: url(/images/qmk_logo.svg) 0 0 no-repeat;
     }
   }
+  .hero-image {
+    background: url(/images/hero.jpg) center 50% no-repeat;
+    background-size: 100% auto;
+  }
   @media screen and (min-width: 751px) {
     display: flex;
     .hero-image {
-      background: url(http://placehold.jp/000000/555x490.png) center 50% no-repeat;
       width: 555px;
       height: 490px;
     }
@@ -341,7 +352,6 @@ content - hero
   @media screen and (max-width: 750px) {
     padding: 0;
     .hero-image {
-      background: url(http://placehold.jp/000000/750x662.png) center 50% no-repeat;
       width: 750px;
       height: 662px;
     }
@@ -365,7 +375,7 @@ content - hero
       .hero-text {
         margin-top: 48px;
         width: 460px;
-        text-align: right;
+        //text-align: right;
       }
       .qmk-logo {
         margin: 60px auto 0;
@@ -498,10 +508,10 @@ content - buildGuide
           min-height: 353px;
         }
         &.bridge01 {
-          min-height: 356px;
+          min-height: 481px;
         }
         &.bridge02 {
-          min-height: 481px;
+          min-height: 356px;
         }
         &.diode01 {
           min-height: 371px;
@@ -545,8 +555,11 @@ content - buildGuide
         &.panel03 {
           min-height: 432px;
         }
+        &.panel04 {
+          min-height: 481px;
+        }
         &.finish01 {
-          min-height: 376px;
+          min-height: 441px;
         }
         &.finish02 {
           min-height: 376px;
