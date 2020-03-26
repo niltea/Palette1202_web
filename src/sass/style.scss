@@ -21,7 +21,7 @@ body {
 loader
 ================== */
 .loader {
-  transition: opacity 500ms, height 0s 600ms;
+  transition: opacity 900ms 0s, height 0s 900ms;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +30,15 @@ loader
     opacity: 0;
     height: 0;
   }
-  .logo {
+  .loader-logo {
     width: 277px;
     height: 205px;
+  }
+  @media screen and (max-width: 750px) {
+    .loader-logo {
+      width: 416px;
+      height: 308px;
+    }
   }
 }
 
