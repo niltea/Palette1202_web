@@ -148,6 +148,9 @@ wrapper
       font-size: 58px;
     }
   }
+  .cyan {
+    color: #0ff;
+  }
 }
 
 /* ===============
@@ -168,6 +171,14 @@ content - common
     .inner_section_header {
       font-weight: 800;
       line-height: 1.25em;
+    }
+    code {
+      display: inline-block;
+      padding: 0 1em;
+      background-color: #333;
+      color: #fff;
+      font-size: 0.85em;
+      letter-spacing: 0.02em;
     }
   }
   @media screen and (min-width: 751px) {
@@ -222,14 +233,6 @@ content - common
       .text-container {
         p {
           padding-top: 35px;
-          code {
-            display: inline-block;
-            padding: 0 1em;
-            background-color: #333;
-            color: #fff;
-            font-size: 0.85em;
-            letter-spacing: 0.02em;
-          }
         }
         .link-button {
           margin-top: 35px;
@@ -598,20 +601,27 @@ content - copyright
 ================== */
 .content_section-copyright {
   text-align: center;
+  .nil-logo {
+    @include txtHide;
+    background: url(/images/nil-logo.png) 0 0 no-repeat;
+    background-size: 100% auto;
+  }
   @media screen and (min-width: 751px) {
     margin-top: 30px;
     font-size: 12px;
+    .nil-logo {
+      margin: 14px auto;
+      width: 100px;
+      height: 22px;
+    }
   }
   @media screen and (max-width: 750px) {
     margin-top: 44px;
-    font-size: 17px;
-  }
-}
-
-.mainFooter {
-  width: 100%;
-  @media screen and (min-width: 751px) {
-  }
-  @media screen and (max-width: 750px) {
+    font-size: 22px;
+    .nil-logo {
+      margin: 18px auto;
+      width: 200px;
+      height: 44px;
+    }
   }
 }
