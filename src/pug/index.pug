@@ -104,7 +104,8 @@ block body
                     h3.inner_section_header 部品一覧
                     .text-container
                         p
-                            | 不足の際は、お手数ではございますが<br class="onlySP">ご連絡をお願いします。
+                            | 不足の際は、お手数ではございますが<br class="onlySP">ご連絡をお願いします。<br>
+                            | MCU直付け版は、この他部品が付属します（部品表参照）。
                     .table
                         dl.table-item
                             dt メイン基板
@@ -216,7 +217,9 @@ block body
                             a(href="https://www.vessel.co.jp/product/screwdriver/detail/251358", target="_blank") TD-51
                             |など。
                             br
-                            |・その他ラジオペンチ・ニッパー等があれば便利です。
+                            |・その他ラジオペンチ・ニッパー・テスター等があれば便利です。
+                            br
+                            |また、MCU直付け版はカプトンテープが必要です。
 
             .build-procedure
                 section.inner_section.text-right
@@ -227,6 +230,7 @@ block body
                         .text-container.upper
                             p
                                 |本製品は左右兼用基板となっています。<br>右手で使うか・左手で使うかに応じて裏表が決まります。<br>
+                                |※Boothにて販売のVer 1.0は左手のみ対応ですので、ジャンパ箇所はありません。
                         figure
                             img(src="/images/check_board-01.jpg")
                         .text-container.lower
@@ -475,6 +479,73 @@ block body
                                 |問題がなければ取り付け完了です。
                         figure
                             img(src="/images/ble-after.jpg")
+
+
+            .build-procedure
+                section.inner_section.text-right
+                    .inner_section_content.table-container
+                        h3.inner_section_header MCU直付け版組み立て手順
+                    .inner_section_content.content-figure.onboard-before
+                        h3.inner_section_header 基板の確認
+                        .text-container.upper
+                            p
+                                |USBコネクタ以外、基本的に裏側（画像参照）に部品を実装します。<br>
+                                |MCU関連部品は凸部分に実装を行います。部品表を参考のうえ、実装を行ってください。
+                                a.link-button(href="/files/onboard-bom.pdf", target="_blank") 部品表 (PDF)
+                        figure
+                            img(src="/images/onboard-before.jpg")
+                        .text-container.lower
+                            p
+                                |なお、MCU実装版は左手版のみの設定のため、ジャンパ箇所はありません。
+                    .inner_section_content.content-figure.onboard-mcu
+                        h3.inner_section_header MCU取り付け
+                        .text-container.upper
+                            p
+                                |カプトンテープ等で図のように固定し、対角線上にハンダで固定し、各ピンをハンダ付けします。<br>
+                                |※YouTube等でQFPパッケージのハンダ付け要領をご確認ください。<br>
+                                |※向きに注意してください。1度付けると取り外しは困難です。
+                            p
+                                |フラックスを塗ってあればブリッジは起きづらいかと思います。<br>取り付け後、ルーペ等で拡大してご確認ください。
+                        figure
+                            img(src="/images/onboard-mcu.jpg")
+                    .inner_section_content.content-figure.onboard-parts
+                        h3.inner_section_header 表面実装部品
+                        .text-container.upper
+                            p
+                                |続いて、MCU以外の主要部品をハンダ付けします。<br>
+                                |積層コンデンサは表面に数値を記載しておりますので、こちらを参考にしてください。<br>
+                                |抵抗は部品表面に数値の記載がありますので、記載をご確認ください。
+                        figure
+                            img(src="/images/onboard-parts.jpg")
+                    .inner_section_content.content-figure.onboard-back
+                        h3.inner_section_header 裏面部品
+                        .text-container.upper
+                            p
+                                |部品取り付け後の参考図です。<br>
+                                |基本的にパターン一箇所に予備ハンダを行い、これを溶かしながら部品を載せる要領でハンダ付け出来るかと思います。
+                            p
+                                |C1（タンタルコンデンサ）は線の無い方がGND側、D20は通常のダイオードと同様、線のある方がカソードです。<br>
+                                |Y1（クリスタル）、C1以外のコンデンサ等、特記のない部品は極性なしです。
+                        figure
+                            img(src="/images/onboard-back.jpg")
+                    .inner_section_content.content-figure.onboard-front
+                        h3.inner_section_header USBコネクタ
+                        .text-container.upper
+                            p
+                                |USBコネクタ・リセットスイッチを取り付けた状態です。<br>
+                                |※コネクタは Micro Type-B, Type-C の2種類同梱していますが、お使いになるコネクタのみ取り付けでOKです。
+                        figure
+                            img(src="/images/onboard-front.jpg")
+                    .inner_section_content.content-figure.onboard-after
+                        h3.inner_section_header 動作確認・仕上げ
+                        .text-container.upper
+                            p
+                                |ここまでの手順に問題がなければ、PCに接続するとUSBデバイスとして認識されるはずです。<br>
+                                |ROMには出荷の時点で key-check ファームを書き込み済ですので、動作確認にお役立てください。
+                            p
+                                |問題なく動作するようであれば、Pro Micro版の「ダイオード」以降の手順を参考に組み立てを行い、完成させてください。
+                        figure
+                            img(src="/images/onboard-after.jpg")
 
         .content_section.content_section-copyright
             div

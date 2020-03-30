@@ -596,6 +596,25 @@ content - buildGuide
         &.ble-after {
           min-height: 461px;
         }
+        //onboard
+        &.onboard-before {
+          min-height: 440px;
+        }
+        &.onboard-mcu {
+          min-height: 421px;
+        }
+        &.onboard-parts {
+          min-height: 471px;
+        }
+        &.onboard-back {
+          min-height: 501px;
+        }
+        &.onboard-front {
+          min-height: 376px;
+        }
+        &.onboard-after {
+          min-height: 421px;
+        }
       }
     }
   }
