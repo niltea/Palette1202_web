@@ -191,6 +191,10 @@ block body
                             dt USBケーブル<br>
                                 span.note Pro Microと互換性のあるもの<br>
                             dd 1本
+                        dl.table-item
+                            dt コイン電池 CR1632<br>
+                                span.note BLE Micro Proを使用する場合のみ<br>
+                            dd 2個
                     .text-container
                         p.tools
                             |また、下記の工具等が必要となります。<br>
@@ -434,6 +438,43 @@ block body
                             p
                                 |問題なく書き込めれば、完成です。<br>お疲れ様でした。<br>
                                 |※ファームはカスタマイズも可能です。自分にとって使いやすい配置にしてみましょう。
+
+
+            .build-procedure
+                section.inner_section.text-right
+                    .inner_section_content.table-container
+                        h3.inner_section_header 電池キット取り付け手順
+                    .inner_section_content.content-figure.ble-before
+                        h3.inner_section_header 基板の確認
+                        .text-container.upper
+                            p
+                                |電池ボックス以外は基板の裏側に実装します。<br>
+                                |裏表とも同様のパターンがありますが、使う方向にあわせて部品を実装してください。
+                        figure
+                            img(src="/images/ble-before.jpg")
+                    .inner_section_content.content-figure.ble-back
+                        h3.inner_section_header 裏面実装部品
+                        .text-container.upper
+                            p
+                                |裏面の実装が終わった状態です。<br>
+                                |※オレンジ色のタンタルコンデンサは、部品上の線が入っている方が電源側です。
+                        figure
+                            img(src="/images/ble-back.jpg")
+                    .inner_section_content.content-figure.ble-front
+                        h3.inner_section_header 表面実装部品
+                        .text-container.upper
+                            p
+                                |電池ボックスを取り付け、表面の実装が終わった状態です。
+                        figure
+                            img(src="/images/ble-front.jpg")
+                    .inner_section_content.content-figure.ble-after
+                        h3.inner_section_header 取り付け完了
+                        .text-container.upper
+                            p
+                                |電池をセットし、スイッチのオンオフで正常に動作することを確認します。<br>
+                                |問題がなければ取り付け完了です。
+                        figure
+                            img(src="/images/ble-after.jpg")
 
         .content_section.content_section-copyright
             div

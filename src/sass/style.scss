@@ -583,6 +583,19 @@ content - buildGuide
         &.finish02 {
           min-height: 376px;
         }
+        //BLE
+        &.ble-before {
+          min-height: 316px;
+        }
+        &.ble-back {
+          min-height: 417px;
+        }
+        &.ble-front {
+          min-height: 382px;
+        }
+        &.ble-after {
+          min-height: 461px;
+        }
       }
     }
   }
