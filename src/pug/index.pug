@@ -73,9 +73,11 @@ block body
                     figure
                         img(src="/images/intro-05.jpg")
                     .text-container.lower
-                        p
+                        //- p
                             |BLE Micro Proのファームウェアもご用意していますので、比較的容易に無線化することができます。
-                        a.link-button(href="/files/palette1202-bmp-20200417.zip") BMP用ファーム
+                            br
+                        p ※現在のブートローダーと互換性がないため、ファームの公開を一時停止しています。
+                        //- a.link-button(href="/files/palette1202-bmp-20200417.zip") BMP用ファーム
         .content_section.content_section-buy
             h2.section_header How To Buy
             section.inner_section.buy-shops
@@ -367,6 +369,13 @@ block body
                                 code make palette1202:
                                     span.cyan key-check
                                     |:avrdude
+                            p
+                                |※右手側で使用する場合、OLEDの向きが異なります。
+                                br
+                                |keyboards/palette1202.c の21行目を下記のように修正してください。
+                                code return&nbsp;
+                                    span.cyan OLED_ROTATION_0
+                                    |;
                             p
                                 |図のようなメッセージが表示されたら、リセットスイッチを押すことで書き込みが開始されます。
                         figure
