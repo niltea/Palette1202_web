@@ -2,15 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 const DEBUG = !process.argv.includes('--release');
 // postcss plugins
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const cssimport = require('postcss-import');
 // const cssnested = require('postcss-nested');
 // const customProperties = require('postcss-custom-properties');
 // const autoprefixer = require('autoprefixer');
 // const csswring = require('csswring');
 
+const MODE = 'production';
 const plugins = [
-new webpack.optimize.OccurrenceOrderPlugin(),
 ];
 
 if(DEBUG){
@@ -24,6 +24,7 @@ if(DEBUG){
 
 module.exports = [
 	{
+		mode: MODE,
 		entry: {
 			'js/app': './src/js/app.js',
 		},
@@ -46,38 +47,48 @@ module.exports = [
 		plugins: plugins
 	},
 	{
+		mode: MODE,
 		entry: {
-			'css/style': './src/sass/style.scss',
-		},
-		output: {
-			path: path.join(__dirname, './docs/'),
-			filename: '[name].css'
+			'style': './src/sass/style.scss',
 		},
 		module: {
 			rules: [
 				{
 					test: /\.scss$/,
 					exclude: /node_modules/,
-					use: ExtractTextPlugin.extract({
-						fallback: "style-loader",
-						use: [
-							{
-								loader: 'css-loader?-url!postcss-loader!sass-loader',
-								options: {
-									url: false,
-									minimize: !DEBUG
-								}
+					use: [
+						{
+							loader: MiniCssExtractPlugin.loader,
+						},
+						{
+							loader: "css-loader",
+							options: {
+								url: false,
+								sourceMap: false,
+
+								// 0 => no loaders (default);
+								// 1 => postcss-loader;
+								// 2 => postcss-loader, sass-loader
+								importLoaders: 2,
 							},
-							"sass-loader"
-						]
-					})
+						},
+						{
+							loader: "sass-loader",
+							options: {
+								sourceMap: false,
+							},
+						},
+					],
 				}
 			]
 		},
+		output: {
+			path: `${__dirname}/docs/css/`,
+		},
 		plugins: [
-			new ExtractTextPlugin({
-				filename: '[name].css'
+			new MiniCssExtractPlugin({
+				filename: './[name].css'
 			})
-		]
+		],
 	}
 ];
