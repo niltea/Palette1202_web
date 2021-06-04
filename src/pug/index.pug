@@ -20,7 +20,7 @@ block body
                 .inner_section_content.content-figure
                     h3.inner_section_header Palette1202とは？
                     .text-container.upper
-                        p Clip StudioやPhotoshopといった、イラスト制作ソフトの操作を効率化するために開発された片手デバイスです。
+                        p Clip Studio / Photoshop の操作を効率化するために開発された片手デバイスです。
                     figure
                         img(src="/images/intro-01.jpg")
                     .text-container.lower
@@ -53,18 +53,18 @@ block body
                             |無駄な指の移動も少なく、キーの位置に迷うこともありません。
                         p
                             |※プログラミングの知識がある方であれば、ファームウェアを変更することでキー配置の変更も可能です。
-            //- section.inner_section.text-left
+            section.inner_section.text-left
                 .inner_section_content.content-figure
                     h3.inner_section_header 左手・右手両対応
                     .text-container.upper
                         p
-                            |(※Ver 2のみ)<br>お好みに応じ、基板の裏表で左手用・右手用どちらにも対応できるため、左利きの方でもご使用いただけます。
+                            |基板の裏表で左手用・右手用どちらにも対応できるため、左利きの方でもペンを持っていない方の手でご使用いただけます。
                     figure
-                        img(src="http://placehold.jp/000000/555x370.png")
+                        img(src="/images/both_side.jpg")
                     .text-container.lower
                         p
-                            |イラスト制作用の片手デバイスのみならず、事務作業用のマクロパッドとして使用することも可能です。
-            section.inner_section.text-left
+                            |もちろん右利きの方でも、イラスト制作用の片手デバイスのみならず、事務作業用のマクロパッドとして使用することも可能です。
+            section.inner_section.text-right
                 .inner_section_content.content-figure
                     h3.inner_section_header BLE Micro Pro対応
                     .text-container.upper
@@ -73,11 +73,28 @@ block body
                     figure
                         img(src="/images/intro-05.jpg")
                     .text-container.lower
-                        //- p
-                            |BLE Micro Proのファームウェアもご用意していますので、比較的容易に無線化することができます。
+                        a.link-button(href="/files/palette1202-bmp-config-dev-20210507.zip") Config（サンプル）
+                        p ※OLEDを点灯させたい場合、別途ファームウェアのコンパイルが必要です
+            section.inner_section.text-left
+                .inner_section_content.content-figure
+                    h3.inner_section_header Community
+                    .text-container.upper
+                        p
+                            |ご購入いただいた方のカスタマイズ等を紹介します。
                             br
-                        p ※現在のブートローダーと互換性がないため、ファームの公開を一時停止しています。
-                        //- a.link-button(href="/files/palette1202-bmp-20200417.zip") BMP用ファーム
+                            |※リンク先内容に関するご質問にはお答えいたしかねます。
+                        p
+                            |・
+                            a(href="http://oookaworks.seesaa.net/article/480422869.html", target="_blank") Premiere / AfterEffects用配列のkeymap
+                            br
+                            |・
+                            a(href="https://make.dmm.com/item/1295487/", target="_blank") ケース（3Dプリント）
+                            br
+                            |・
+                            a(href="https://shortest109.blog.fc2.com/blog-entry-388.html", target="_blank") ビルドログ
+                            br
+                            |(組立の際はこちらもあわせてご確認頂くとわかりやすいです！)
+
         .content_section.content_section-buy
             h2.section_header How To Buy
             section.inner_section.buy-shops
@@ -148,6 +165,8 @@ block body
                         dl.table-item
                             dt ねじ（5mm）<br>
                                 span.note Pro Microカバー用
+                                    br
+                                    |※2021年5月出荷分より4mmへ変更しています
                             dd 4個
                         dl.table-item
                             dt ねじ（3.5mm）<br>
@@ -173,7 +192,7 @@ block body
                         dl.table-item
                             dt ダイオード(1N4148・リードタイプ)<br>
                                 span.note ※付属の表面実装ダイオードの使用が難しい場合のみ<br>
-                                    |Chocの場合は表面実装のみ対応
+                                    |Chocの場合はリードタイプは使用できません
                             dd 14個
                         dl.table-item
                             dt Kailh Choc用 HotSwap ソケット<br>
@@ -559,7 +578,7 @@ block body
             div
                 | Copyright © 2019-2020&nbsp;
                 a(href="https://twitter.com/niltea", target="_blank") Takashi Shibusawa
-                .nil-logo Nilgiri Tea
+                a.nil-logo(href="//nilgiri-tea.net/") Nilgiri Tea
 
         .loader#loader
             .loader-logo
